@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/swift/static/css/main.f855e6bc.css",
-    "main.js": "/swift/static/js/main.9e024afc.js",
-    "static/js/453.bdfd2102.chunk.js": "/swift/static/js/453.bdfd2102.chunk.js",
-    "static/media/logo.svg": "/swift/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/swift/index.html",
-    "main.f855e6bc.css.map": "/swift/static/css/main.f855e6bc.css.map",
-    "main.9e024afc.js.map": "/swift/static/js/main.9e024afc.js.map",
-    "453.bdfd2102.chunk.js.map": "/swift/static/js/453.bdfd2102.chunk.js.map"
+    "main.css": "/swift-money/static/css/main.f855e6bc.css",
+    "main.js": "/swift-money/static/js/main.92435fb3.js",
+    "static/js/453.df852f67.chunk.js": "/swift-money/static/js/453.df852f67.chunk.js",
+    "static/media/logo.svg": "/swift-money/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/swift-money/index.html",
+    "main.f855e6bc.css.map": "/swift-money/static/css/main.f855e6bc.css.map",
+    "main.92435fb3.js.map": "/swift-money/static/js/main.92435fb3.js.map",
+    "453.df852f67.chunk.js.map": "/swift-money/static/js/453.df852f67.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.9e024afc.js"
+    "static/js/main.92435fb3.js"
   ]
 }
