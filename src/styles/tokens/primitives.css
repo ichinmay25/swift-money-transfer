@@ -1,0 +1,43 @@
+/* ==========================================================================
+   PRIMITIVE COLOR TOKENS
+   ========================================================================== */
+
+/* Primitives */
+:root {
+  /* Mode 1 */
+  /* color */
+  --concord-00: #ffffff;
+  --concord-100: #e6e6e6;
+  --concord-200: #cac9c8;
+  --concord-300: #b1afae;
+  --concord-400: #989694;
+  --concord-50: #f8f8f8;
+  --concord-500-(base): #7f7c7a;
+  --concord-600: #656361;
+  --concord-700: #4b4948;
+  --concord-800: #31302f;
+  --concord-900: #171616;
+  --concord-950: #0a0a0a;
+  --fuchsia-blue-100: #f5f0fa;
+  --fuchsia-blue-200: #d9caee;
+  --fuchsia-blue-300: #bea3e2;
+  --fuchsia-blue-400: #a27cd6;
+  --fuchsia-blue-50: #ffffff;
+  --fuchsia-blue-500-(base): #8755ca;
+  --fuchsia-blue-600: #6d38b4;
+  --fuchsia-blue-700: #552c8d;
+  --fuchsia-blue-800: #3e2066;
+  --fuchsia-blue-900: #26143f;
+  --fuchsia-blue-950: #1b0e2c;
+  --indigo-100: #c8d4f2;
+  --indigo-200: #9fb4e8;
+  --indigo-300: #7594df;
+  --indigo-400-(base): #4c74d5;
+  --indigo-50: #dde4f7;
+  --indigo-500: #2d58c1;
+  --indigo-600: #244597;
+  --indigo-700: #1a326e;
+  --indigo-800: #102045;
+  --indigo-900: #060d1c;
+  --indigo-950: #020307;
+}

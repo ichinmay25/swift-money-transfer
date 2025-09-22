@@ -1,0 +1,98 @@
+/* ==========================================================================
+   SUCCESS SCREEN STYLES
+   ========================================================================== */
+
+.success-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.success-message-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  padding: 24px;
+  min-height: 0; /* Allows flex item to shrink below content size */
+  overflow: hidden; /* Prevent content from overflowing */
+}
+
+/* Success Circle */
+.success-circle {
+  width: 96px;
+  height: 96px;
+  background-color: var(--surface-00, #ffffff);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Success Checkmark */
+.success-checkmark {
+  width: 56px;
+  height: 56px;
+}
+
+.success-message {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 120%;
+  color: var(--text-invert, #ffffff);
+  text-align: center;
+  margin: 0;
+  max-width: 320px;
+}
+
+/* ==========================================================================
+   SUCCESS SCREEN FOOTER (Same structure as SendModal)
+   ========================================================================== */
+
+.success-screen-footer {
+  width: 100%;
+  padding: 8px 24px;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.success-footer-button {
+  width: 100%;
+}
+
+/* ==========================================================================
+   SUCCESS SCREEN HOME INDICATOR (Same as SendModal)
+   ========================================================================== */
+
+.success-screen-home-indicator {
+  height: 34px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.success-screen-home-indicator-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .success-message {
+    font-size: 24px;
+  }
+}

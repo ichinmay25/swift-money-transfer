@@ -1,0 +1,269 @@
+/* ==========================================================================
+   HOME SCREEN STYLES - Three Section Layout
+   ========================================================================== */
+
+.home-screen {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--surface-00, #ffffff);
+}
+
+/* NavBar */
+.navbar {
+  height: 64px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background-color: var(--surface-00, #ffffff);
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  height: 24px;
+  width: auto;
+  display: block;
+}
+
+/* Body */
+.body {
+  flex: 1;
+  width: 100%;
+  padding: 16px 24px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Chip Container */
+.chip-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Graph Container */
+.graph-container {
+  width: 100%;
+  height: 225px;
+  background-color: var(--surface-00, #ffffff);
+  border: 1px solid var(--border-00, #e8e8e8);
+  border-radius: 16px;
+  padding: 16px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Exchange Rate H3 */
+.exchange-rate {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 120%;
+  color: var(--text-primary, #31302f);
+  margin: 0;
+}
+
+/* Change Container */
+.change-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Change Icon */
+.change-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.change-bad {
+  color: var(--error-01, #E53E3E);
+}
+
+.change-good {
+  color: var(--success-01, #03B912);
+}
+
+/* Change Amount (Body 3 - text/body) */
+.change-amount {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--text-body, #4b4948);
+  margin: 0;
+}
+
+/* Change Period (Body 3 - text/disabled) */
+.change-period {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--text-disabled, #8b8b8b);
+  margin: 0;
+}
+
+/* Graph Area */
+.graph-area {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Graph content will be added here */
+}
+
+/* Graph Loading State */
+.graph-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+}
+
+.loading-spinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--border-00, #e8e8e8);
+  border-top: 2px solid var(--primary-01, #03B912);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.graph-loading p {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-body, #4b4948);
+  margin: 0;
+}
+
+/* Graph Placeholder */
+.graph-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.graph-placeholder p {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-disabled, #8b8b8b);
+  margin: 0;
+}
+
+/* Transfers Container */
+.transfers-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Transfers Header */
+.transfers-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: auto;
+  padding: 0px
+}
+
+/* Transfers Title */
+.transfers-title {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 120%;
+  color: var(--text-primary, #31302f);
+  margin: 0;
+}
+
+/* Transfers Cards */
+.transfers-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Bottom Bar */
+.bottom-bar {
+  width: 100%;
+  height: 72px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: stretch;
+  padding: 0;
+  background-color: var(--surface-00, #ffffff);
+  border-top: 1px solid var(--border-00, #e8e8e8);
+}
+
+/* Placeholder Content Styles */
+.placeholder-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.placeholder-title {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 120%;
+  color: var(--text-primary, #31302f);
+  margin: 0;
+}
+
+.placeholder-message {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--text-body, #4b4948);
+  margin: 0;
+  max-width: 300px;
+}

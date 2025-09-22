@@ -1,0 +1,194 @@
+/* ==========================================================================
+   ICON BUTTON COMPONENT STYLES
+   ========================================================================== */
+
+/* Base IconButton Styles - Inherits from Button but makes it square */
+.swift-icon-button {
+  /* Reset default button styles */
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  
+  /* Layout - Square shape (width = height) */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Typography */
+  font-family: 'Satoshi', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  
+  /* Transitions */
+  transition: all 0.2s ease;
+  
+  /* Border radius - Will be overridden by size-specific classes */
+  border-radius: 16px;
+  
+  /* Remove padding for square shape */
+  padding: 0;
+}
+
+/* Material Icons styling */
+.swift-icon-button__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* ==========================================================================
+   ICON BUTTON SIZES
+   ========================================================================== */
+
+/* Large IconButton - 56px x 56px with 18px icon */
+.swift-icon-button--large {
+  height: 56px;
+  width: 56px;
+  border-radius: 28px;
+}
+
+.swift-icon-button--large .swift-icon-button__icon {
+  font-size: 18px;
+}
+
+/* Medium IconButton - 40px x 40px with 16px icon */
+.swift-icon-button--medium {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+}
+
+.swift-icon-button--medium .swift-icon-button__icon {
+  font-size: 16px;
+}
+
+/* Small IconButton - 32px x 32px with 14px icon */
+.swift-icon-button--small {
+  height: 32px;
+  width: 32px;
+  border-radius: 16px;
+}
+
+.swift-icon-button--small .swift-icon-button__icon {
+  font-size: 14px;
+}
+
+/* ==========================================================================
+   ICON BUTTON VARIANTS
+   ========================================================================== */
+
+/* Primary IconButton - Same gradient as regular button */
+.swift-icon-button--primary {
+  background: linear-gradient(135deg, var(--surface-primary-01, #8755ca), var(--surface-primary-02, #4c74d5));
+  color: var(--text-invert, #ffffff);
+  border: none;
+}
+
+.swift-icon-button--primary:hover {
+  background: linear-gradient(135deg, var(--action-surface-hover, #a27cd6), var(--surface-primary-02, #4c74d5));
+  transform: translateY(-1px);
+}
+
+.swift-icon-button--primary:active {
+  background: linear-gradient(135deg, var(--action-surface-selected, #6d38b4), var(--surface-primary-02, #4c74d5));
+  transform: translateY(0);
+}
+
+/* Secondary IconButton - Same styling as regular button */
+.swift-icon-button--secondary {
+  background-color: var(--surface-01, #f8f8f8);
+  color: var(--text-subtitle, #31302f);
+}
+
+.swift-icon-button--secondary:hover {
+  background-color: var(--surface-03, #cac9c8);
+  border-color: var(--border-03, #cac9c8);
+  transform: translateY(-1px);
+}
+
+.swift-icon-button--secondary:active {
+  background-color: var(--surface-03, #cac9c8);
+  transform: translateY(0);
+}
+
+/* Tertiary IconButton - No background, text/caption color */
+.swift-icon-button--tertiary {
+  background-color: transparent;
+  color: var(--text-caption, #4b4948);
+  border: none;
+}
+
+.swift-icon-button--tertiary:hover {
+  background-color: var(--surface-01, #f8f8f8);
+  color: var(--text-subtitle, #31302f);
+}
+
+.swift-icon-button--tertiary:active {
+  background-color: var(--surface-03, #cac9c8);
+}
+
+/* ==========================================================================
+   DISABLED STATE
+   ========================================================================== */
+
+.swift-icon-button--disabled {
+  background-color: var(--surface-disabled, #b1afae) !important;
+  color: var(--text-disabled, #989694) !important;
+  border-color: var(--border-disabled, #989694) !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.swift-icon-button--disabled:hover,
+.swift-icon-button--disabled:active {
+  background-color: var(--surface-disabled, #b1afae) !important;
+  color: var(--text-disabled, #989694) !important;
+  border-color: var(--border-disabled, #989694) !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Primary disabled - special case */
+.swift-icon-button--primary.swift-icon-button--disabled {
+  background: var(--surface-disabled, #b1afae) !important;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .swift-icon-button--large {
+    height: 48px;
+    width: 48px;
+    border-radius: 24px;
+  }
+  
+  .swift-icon-button--large .swift-icon-button__icon {
+    font-size: 16px;
+  }
+  
+  .swift-icon-button--medium {
+    height: 36px;
+    width: 36px;
+    border-radius: 18px;
+  }
+  
+  .swift-icon-button--medium .swift-icon-button__icon {
+    font-size: 14px;
+  }
+  
+  .swift-icon-button--small {
+    height: 28px;
+    width: 28px;
+    border-radius: 14px;
+  }
+  
+  .swift-icon-button--small .swift-icon-button__icon {
+    font-size: 12px;
+  }
+}

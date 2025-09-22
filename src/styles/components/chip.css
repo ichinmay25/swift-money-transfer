@@ -1,0 +1,142 @@
+/* ==========================================================================
+   CHIP COMPONENT STYLES
+   ========================================================================== */
+
+/* Base Chip Styles */
+.swift-chip {
+  /* Layout */
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  
+  /* Size */
+  width: fit-content;
+  height: fit-content;
+  
+  /* Spacing */
+  padding: 6px 8px 6px 5px;
+  gap: 4px;
+  
+  /* Interaction */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  /* Border radius */
+  border-radius: 16px;
+  
+  /* Typography reset */
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Chip Image */
+.swift-chip__image {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Chip Image Component (for React components like flags) */
+.swift-chip__image--component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--surface-02, #e8e8e8);
+}
+
+/* Ensure flag components fill the entire circular container */
+.swift-chip__image--component svg {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 50%;
+  min-width: 120%;
+  min-height: 120%;
+}
+
+/* Chip Text */
+.swift-chip__text {
+  /* Heading 5 Typography */
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 0.25px;
+  
+  /* Prevent text selection */
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  
+  /* Text wrapping */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ==========================================================================
+   CHIP STATES
+   ========================================================================== */
+
+/* Unselected State - surface 01 */
+.swift-chip--unselected {
+  background-color: var(--surface-01, #f8f8f8);
+  border: none;
+}
+
+.swift-chip--unselected .swift-chip__text {
+  color: var(--text-primary, #31302f);
+}
+
+.swift-chip--unselected:hover {
+  background-color: var(--surface-02, #e8e8e8);
+  transform: translateY(-1px);
+}
+
+/* Selected State - surface/invert */
+.swift-chip--selected {
+  background-color: var(--surface-invert, #31302f);
+  border: none;
+}
+
+.swift-chip--selected .swift-chip__text {
+  color: var(--text-invert, #ffffff);
+}
+
+.swift-chip--selected:hover {
+  background-color: var(--text-primary, #31302f);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .swift-chip__text {
+    font-size: 13px;
+  }
+  
+  .swift-chip__image {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .swift-chip {
+    padding: 5px 7px 5px 4px;
+    gap: 3px;
+  }
+  
+  /* Ensure flag components fill properly on mobile */
+  .swift-chip__image--component svg {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 50%;
+    min-width: 120%;
+    min-height: 120%;
+  }
+}

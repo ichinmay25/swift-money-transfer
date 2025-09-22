@@ -1,0 +1,123 @@
+/* ==========================================================================
+   AMOUNT INPUT COMPONENT STYLES
+   ========================================================================== */
+
+.amount-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0;
+}
+
+.amount-input-label {
+  margin: 0;
+  color: var(--text-ex-body, #666666);
+}
+
+.amount-input-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 64px;
+  padding: 16px 16px 16px 16px;
+  gap: 12px;
+  background-color: var(--surface-00, #ffffff);
+  border: 1px solid var(--border-01, #e0e0e0);
+  border-radius: 8px;
+}
+
+.country-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 81px;
+  height: 24px;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.flag-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background-color: var(--surface-01, #f8f8f8);
+  flex-shrink: 0;
+  overflow: hidden; /* Allow flag to overflow slightly */
+}
+
+.currency-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-body, #31302f);
+  flex: 1;
+}
+
+.dropdown-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-body, #31302f);
+  cursor: pointer;
+}
+
+.amount-input-field {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+
+.amount-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  text-align: right;
+  color: var(--text-title, #1a1918);
+}
+
+/* Ensure heading-2 styles are applied to input */
+.amount-input.h2 {
+  font-size: 24px;
+  line-height: 120%;
+  font-weight: 700;
+  letter-spacing: 0px;
+}
+
+
+.amount-input::placeholder {
+  color: var(--text-placeholder, #999999);
+  font-weight: 400;
+}
+
+/* Description paragraph styling */
+.amount-input-container p.body-3 {
+  margin: 0;
+  color: var(--text-body, #31302f);
+  font-size: 12px;
+  line-height: 150%;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+
+/* Focus states */
+.amount-input-wrapper:focus-within {
+  border-color: var(--primary-01, #03B912);
+  box-shadow: 0 0 0 2px rgba(3, 185, 18, 0.1);
+}
+
+/* Hover states */
+.country-container:hover {
+  cursor: pointer;
+}
+
+.dropdown-arrow:hover {
+  color: var(--primary-01, #03B912);
+}

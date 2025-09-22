@@ -1,0 +1,44 @@
+/* Satoshi Font Declarations */
+
+/* 
+   When you add your Satoshi font files to this folder, uncomment and modify the @font-face declarations below.
+   Example font files to add: Satoshi-Regular.woff2, Satoshi-Bold.woff2, etc.
+*/
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./Satoshi-Regular.woff2') format('woff2'),
+       url('./Satoshi-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./Satoshi-Medium.woff2') format('woff2'),
+       url('./Satoshi-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./Satoshi-Bold.woff2') format('woff2'),
+       url('./Satoshi-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./Satoshi-Black.woff2') format('woff2'),
+       url('./Satoshi-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Add more @font-face declarations as needed for Light, Italic, or other Satoshi variants */

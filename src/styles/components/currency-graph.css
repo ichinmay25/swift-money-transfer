@@ -1,0 +1,69 @@
+/* ==========================================================================
+   CURRENCY GRAPH STYLES
+   ========================================================================== */
+
+.currency-graph {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ensure Chart.js canvas fills the container */
+.currency-graph canvas {
+  background: transparent !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+
+/* Current Value Indicator */
+.current-value-indicator {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.indicator-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #3B82F6;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Chart.js overrides for better styling */
+.currency-graph canvas {
+  background: transparent !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .indicator-dot {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .indicator-line {
+    background: repeating-linear-gradient(
+      to bottom,
+      #03B912 0px,
+      #03B912 3px,
+      transparent 3px,
+      transparent 6px
+    );
+  }
+}

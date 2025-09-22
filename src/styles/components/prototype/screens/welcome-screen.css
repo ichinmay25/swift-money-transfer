@@ -1,0 +1,51 @@
+/* Welcome Screen Styles */
+.welcome-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Welcome Content Container */
+.welcome-content {
+  text-align: center;
+  z-index: 10;
+}
+
+/* Swift Text */
+.swift-text {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+  font-style: italic;
+  color: white;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+/* Animation for fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.swift-text {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .swift-text {
+    font-size: 56px;
+  }
+}

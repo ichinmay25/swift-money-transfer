@@ -1,0 +1,35 @@
+/* ==========================================================================
+   SEMANTIC COLOR TOKENS
+   ========================================================================== */
+
+/* Semantic color tokens - Light mode only */
+:root {
+  /* Border Colors */
+  --border-00: var(--concord-50);
+  --border-01: var(--concord-100);
+  --border-03: var(--concord-200);
+  --border-disabled: var(--concord-400);
+  --border-primary: var(--fuchsia-blue-400);
+
+  /* Surface Colors */
+  --surface-00: var(--concord-00);
+  --surface-01: var(--concord-50);
+  --surface-03: var(--concord-100);
+  --surface-disabled: var(--concord-300);
+  --surface-primary-01: var(--fuchsia-blue-500-(base));
+  --surface-primary-02: var(--indigo-400-(base));
+
+  /* Text Colors */
+  --text-body: var(--concord-600);
+  --text-caption: var(--concord-700);
+  --text-disabled: var(--concord-400);
+  --text-invert: var(--concord-00);
+  --text-primary: var(--fuchsia-blue-500-(base));
+  --text-subtitle: var(--concord-800);
+  --text-title: var(--concord-950);
+
+  /* Action Colors */
+  --action-surface-default: var(--fuchsia-blue-500-(base));
+  --action-surface-hover: var(--fuchsia-blue-400);
+  --action-surface-selected: var(--fuchsia-blue-600);
+}

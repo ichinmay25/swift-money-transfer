@@ -1,0 +1,69 @@
+/* ==========================================================================
+   CUSTOM RADIO BUTTON STYLES
+   ========================================================================== */
+
+.custom-radio-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.custom-radio-button__container {
+  position: relative;
+  border: 2px solid var(--surface-03, #cac9c8);
+  border-radius: 50%;
+  background-color: transparent;
+  transition: all 0.2s ease;
+  padding: 1px; /* 1px padding for inner circle inset */
+  box-sizing: border-box;
+}
+
+.custom-radio-button:has(.custom-radio-button__inner-circle) .custom-radio-button__container {
+  border-color: var(--primary-01, #03B912);
+}
+
+.custom-radio-button__inner-circle {
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-01, #03B912);
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+/* Size variants */
+.custom-radio-button--small .custom-radio-button__container {
+  width: 16px;
+  height: 16px;
+}
+
+.custom-radio-button--medium .custom-radio-button__container {
+  width: 20px;
+  height: 20px;
+}
+
+.custom-radio-button--large .custom-radio-button__container {
+  width: 24px;
+  height: 24px;
+}
+
+/* Hover states */
+.custom-radio-button:hover .custom-radio-button__container {
+  border-color: var(--surface-02, #f0f0f0);
+}
+
+.custom-radio-button:hover .custom-radio-button__inner-circle {
+  background-color: var(--primary-02, #02A00E);
+}
+
+/* Focus states */
+.custom-radio-button:focus-within .custom-radio-button__container {
+  outline: 2px solid var(--primary-01, #03B912);
+  outline-offset: 2px;
+}
+
+/* Active states */
+.custom-radio-button:active .custom-radio-button__container {
+  transform: scale(0.95);
+}

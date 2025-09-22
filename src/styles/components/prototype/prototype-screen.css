@@ -1,0 +1,16 @@
+/* ==========================================================================
+   PROTOTYPE SCREEN CONTAINER STYLES
+   ========================================================================== */
+
+.prototype-screen-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .prototype-screen-container {
+    width: 100%;
+  }
+}

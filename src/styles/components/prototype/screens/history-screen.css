@@ -1,0 +1,248 @@
+/* ==========================================================================
+   HISTORY SCREEN STYLES
+   ========================================================================== */
+
+.history-screen {
+  height: 100%;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.history-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background-color: white;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+  padding: 4px;
+}
+
+.history-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.header-spacer {
+  width: 28px;
+}
+
+/* Summary Cards */
+.summary-cards {
+  display: flex;
+  gap: 12px;
+  padding: 16px 20px;
+}
+
+.summary-card {
+  flex: 1;
+  background-color: white;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+.summary-label {
+  font-size: 12px;
+  color: #666;
+  margin: 0 0 8px 0;
+}
+
+.summary-amount {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+
+.summary-amount.sent {
+  color: #dc3545;
+}
+
+.summary-amount.received {
+  color: #28a745;
+}
+
+.summary-subtitle {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
+/* Filter Tabs */
+.filter-tabs {
+  display: flex;
+  padding: 0 20px 16px 20px;
+  gap: 8px;
+}
+
+.filter-tab {
+  flex: 1;
+  padding: 8px 12px;
+  background-color: white;
+  border: 2px solid #e6e6e6;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #666;
+}
+
+.filter-tab:hover {
+  border-color: #ccc;
+}
+
+.filter-tab.active {
+  background-color: var(--surface-primary-01, #8755ca);
+  border-color: var(--surface-primary-01, #8755ca);
+  color: white;
+}
+
+/* Transactions List */
+.transactions-list {
+  flex: 1;
+  background-color: white;
+  margin: 0 20px;
+  border-radius: 12px;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.transaction-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.transaction-item:last-child {
+  border-bottom: none;
+}
+
+.transaction-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--surface-primary-01, #8755ca);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.transaction-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.transaction-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 2px 0;
+}
+
+.transaction-email {
+  font-size: 12px;
+  color: #666;
+  margin: 0 0 2px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.transaction-date {
+  font-size: 12px;
+  color: #999;
+  margin: 0;
+}
+
+.transaction-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.transaction-amount {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.transaction-amount.sent {
+  color: #dc3545;
+}
+
+.transaction-amount.received {
+  color: #28a745;
+}
+
+.transaction-status {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.transaction-status.completed {
+  color: #28a745;
+}
+
+.transaction-status.pending {
+  color: #ffc107;
+}
+
+/* Bottom Actions */
+.history-actions {
+  display: flex;
+  gap: 12px;
+  padding: 20px;
+  background-color: white;
+  border-top: 1px solid #e6e6e6;
+}
+
+.history-actions .action-btn {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.history-actions .action-btn.primary {
+  background: linear-gradient(135deg, var(--surface-primary-01, #8755ca), var(--surface-primary-02, #4c74d5));
+  color: white;
+}
+
+.history-actions .action-btn.secondary {
+  background-color: #f8f9fa;
+  color: #333;
+  border: 1px solid #e6e6e6;
+}
+
+.history-actions .action-btn:hover {
+  transform: translateY(-1px);
+}

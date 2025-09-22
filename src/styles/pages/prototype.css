@@ -1,0 +1,122 @@
+/* ==========================================================================
+   PROTOTYPE PAGE STYLES
+   ========================================================================== */
+
+/* Hero Section - 100vh height, 32px horizontal padding */
+.prototype-hero-section {
+  height: 100vh;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4rem; /* Account for fixed nav */
+  box-sizing: border-box;
+}
+
+/* Hero Container - Horizontal alignment, 32px gap, fill height, max-width 1280px */
+.prototype-hero-container {
+  display: flex;
+  align-items: stretch; /* Fill height */
+  justify-content: center;
+  gap: 32px;
+  max-width: 1280px;
+  width: 100%;
+  height: 100%;
+}
+
+/* Left Side Content - Right alignment, vertically centered */
+.prototype-left-content {
+  display: flex;
+  align-items: center; /* Vertically centered */
+  justify-content: flex-end; /* Right alignment */
+  flex: 1;
+}
+
+/* Info Container - 402px width, 874px height, vertical alignment, 16px gap */
+.prototype-info-container {
+  width: 402px;
+  height: 874px;
+  display: flex;
+  flex-direction: column; /* Vertical alignment */
+  gap: 16px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.prototype-info-container h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+}
+
+.prototype-info-container .body-1 {
+  font-size: 12px;
+  line-height: 150%;
+  color: #666;
+  margin: 0;
+}
+
+.prototype-info-container .body-2 {
+  font-size: 12px;
+  line-height: 150%;
+  color: #999;
+  margin: 0;
+}
+
+/* Right Side Container - Left alignment, vertically centered */
+.prototype-right-content {
+  display: flex;
+  align-items: center; /* Vertically centered */
+  justify-content: flex-start; /* Left alignment */
+  flex: 1;
+}
+
+/* Screen Container styles moved to /styles/components/prototype-screen.css */
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .prototype-hero-section {
+    padding: 0 24px;
+  }
+  
+  .prototype-hero-container {
+    gap: 24px;
+  }
+  
+  .prototype-info-container {
+    width: 350px;
+    height: 760px;
+  }
+}
+
+@media (max-width: 768px) {
+  .prototype-hero-section {
+    height: auto;
+    min-height: 100vh;
+    padding: 0 16px;
+    padding-top: 6rem;
+  }
+  
+  .prototype-hero-container {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+  
+  .prototype-left-content,
+  .prototype-right-content {
+    justify-content: center;
+  }
+  
+  .prototype-info-container {
+    width: 100%;
+    max-width: 350px;
+    height: 600px;
+  }
+  
+  .prototype-info-container h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,236 @@
+/* ==========================================================================
+   CHAT SCREEN COMPONENT STYLES
+   ========================================================================== */
+
+.chat-screen {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--surface-00, #ffffff);
+}
+
+/* Chat NavBar */
+.chat-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background-color: var(--surface-00, #ffffff);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.chat-navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.chat-user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.chat-user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.chat-user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.chat-user-name {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary, #31302f);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.chat-user-status {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-body, #666666);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.chat-navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Chat Body */
+.chat-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* Messages */
+.chat-messages {
+  flex: 1;
+  padding: 16px 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.message {
+  display: flex;
+  max-width: 70%;
+}
+
+.message.received {
+  align-self: flex-start;
+}
+
+.message.sent {
+  align-self: flex-end;
+}
+
+.message-content {
+  background-color: var(--surface-01, #f8f8f8);
+  padding: 12px 16px;
+  border-radius: 18px;
+  position: relative;
+}
+
+.message.sent .message-content {
+  background-color: var(--surface-primary-01, #8755ca);
+  color: var(--surface-00, #ffffff);
+}
+
+.message-content p {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0 0 4px 0;
+}
+
+.message-time {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  opacity: 0.7;
+  display: block;
+}
+
+/* Request Money Card */
+.request-money-card {
+  background-color: var(--surface-01, #f8f8f8);
+  border-radius: 18px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 211.39px;
+}
+
+.request-label {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-body, #666666);
+  margin: 0;
+  text-align: left;
+}
+
+.request-amount {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary, #31302f);
+  margin: 0;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.request-amount-usd {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-body, #666666);
+  margin: 0;
+  text-align: left;
+}
+
+.request-money-card .swift-button {
+  width: 100%;
+  margin-top: 4px;
+}
+
+/* Chat Footer */
+.chat-footer {
+  padding: 8px 24px;
+  background-color: var(--surface-00, #ffffff);
+  flex-shrink: 0;
+}
+
+.chat-footer-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.message-container {
+  flex: 1;
+  background-color: var(--surface-01, #f8f8f8);
+  border-radius: 24px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.chat-footer-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-primary, #31302f);
+  padding: 0;
+  height: 100%;
+}
+
+.chat-footer-input::placeholder {
+  color: var(--text-body, #666666);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chat-navbar {
+    padding: 12px 16px;
+  }
+  
+  .chat-messages {
+    padding: 12px 16px;
+  }
+  
+  .chat-footer {
+    padding: 12px 16px;
+  }
+  
+  .message {
+    max-width: 85%;
+  }
+}

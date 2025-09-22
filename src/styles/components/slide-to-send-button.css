@@ -1,0 +1,139 @@
+/* ==========================================================================
+   SLIDE TO SEND BUTTON COMPONENT STYLES
+   ========================================================================== */
+
+.slide-to-send-container {
+  width: 100%;
+  height: 56px;
+  position: relative;
+  background-color: var(--surface-01, #f8f8f8);
+  border-radius: 28px;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+  padding: 0;
+  margin: 0;
+}
+
+.slide-to-send-container.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.slide-to-send-container.completed {
+  background-color: var(--primary-01, #03B912);
+}
+
+.slide-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-image: url('../../assets/images/bg-image.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 28px 0px 0px 28px;
+  transition: width 0.1s ease;
+  z-index: 1;
+}
+
+.slide-text {
+  position: relative;
+  z-index: 2;
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 12px;
+  line-height: 120%;
+  font-weight: 700;
+  letter-spacing: 2%;
+  text-transform: uppercase;
+  color: var(--text-primary, #31302f);
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.slide-to-send-container.completed .slide-text {
+  color: var(--surface-00, #ffffff);
+}
+
+.slide-to-send-container.sliding .slide-text {
+  color: var(--surface-00, #ffffff);
+}
+
+
+.slide-button {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 56px;
+  height: 56px;
+  z-index: 3;
+  transition: transform 0.1s ease;
+  cursor: grab;
+  background-color: var(--surface-00, #ffffff);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+.slide-button:active {
+  cursor: grabbing;
+}
+
+.slide-to-send-container.disabled .slide-button {
+  cursor: not-allowed;
+}
+
+/* Icon button with primary surface gradient text */
+.slide-button .swift-icon-button {
+  background: transparent !important;
+  border: none !important;
+  color: transparent !important;
+  background-image: linear-gradient(135deg, var(--surface-primary-01, #8755ca), var(--surface-primary-02, #4c74d5)) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.slide-button .swift-icon-button .material-icons {
+  background-image: linear-gradient(135deg, var(--surface-primary-01, #8755ca), var(--surface-primary-02, #4c74d5)) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+}
+
+/* Hover effects */
+.slide-to-send-container:not(.disabled):not(.completed):hover {
+  background-color: var(--surface-02, #f0f0f0);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .slide-to-send-container {
+    height: 52px;
+    border-radius: 26px;
+  }
+  
+  .slide-button {
+    width: 44px;
+    height: 44px;
+    top: 4px;
+    left: 4px;
+  }
+  
+  .slide-text {
+    font-size: 15px;
+  }
+}

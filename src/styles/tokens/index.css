@@ -1,0 +1,11 @@
+/* ==========================================================================
+   DESIGN TOKENS INDEX
+   ========================================================================== */
+
+/* Import all design tokens */
+@import './primitives.css';
+@import './semantic.css';
+
+/* Future token files can be imported here:
+   @import './components.css';
+*/

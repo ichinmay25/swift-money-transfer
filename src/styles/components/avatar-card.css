@@ -1,0 +1,173 @@
+/* ==========================================================================
+   AVATAR CARD COMPONENT STYLES
+   ========================================================================== */
+
+.avatar-card {
+  /* Layout */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 0;
+  
+  /* Interaction */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  /* Typography */
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+
+/* Media Container (Image or Icon Button) */
+.avatar-card__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Avatar Image */
+.avatar-card__image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Icon Button Styling */
+.avatar-card__icon-button {
+  width: 40px;
+  height: 40px;
+}
+
+/* Content Container */
+.avatar-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0;
+  flex: 1;
+  min-width: 0; /* Allow text to truncate */
+}
+
+/* Third Content Container */
+.avatar-card__third-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+/* Radio Button Container */
+.avatar-card__radio-container {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Radio Button */
+.avatar-card__radio {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--primary-01, #03B912);
+  cursor: pointer;
+  border: 2px solid var(--surface-03, #cac9c8);
+  border-radius: 50%;
+  padding: 1px;
+  box-sizing: border-box;
+}
+
+.avatar-card__radio:checked {
+  border-color: var(--primary-01, #03B912);
+  background-color: var(--primary-01, #03B912);
+}
+
+/* Text Content Container */
+.avatar-card__text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  padding: 0;
+}
+
+/* Amount Text (H6) */
+.avatar-card__amount {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 120%;
+  color: var(--text-primary, #31302f);
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Currency Text (Body 3) */
+.avatar-card__currency {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 120%;
+  color: var(--text-body, #4b4948);
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Send Button */
+.avatar-card__send-button {
+  flex-shrink: 0;
+}
+
+/* Name (H5) */
+.avatar-card__name {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 120%;
+  color: var(--text-primary, #31302f);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Subheading (Body 3) */
+.avatar-card__subheading {
+  font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--text-body, #4b4948);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .avatar-card {
+    gap: 10px;
+  }
+  
+  .avatar-card__image,
+  .avatar-card__icon-button {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .avatar-card__name {
+    font-size: 15px;
+  }
+  
+  .avatar-card__subheading {
+    font-size: 13px;
+  }
+}

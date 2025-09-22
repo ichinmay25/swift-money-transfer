@@ -1,0 +1,268 @@
+/* ==========================================================================
+   SEND SCREEN STYLES
+   ========================================================================== */
+
+.send-screen {
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.send-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e6e6e6;
+  background-color: white;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+  padding: 4px;
+}
+
+.send-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.step-indicator {
+  font-size: 14px;
+  color: #666;
+  background-color: #f8f9fa;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+/* Send Step Container */
+.send-step {
+  flex: 1;
+  padding: 24px 20px;
+  overflow-y: auto;
+}
+
+.step-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 24px 0;
+  color: #333;
+}
+
+.recipient-info {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 24px 0;
+}
+
+/* Input Fields */
+.input-field, .amount-field, .message-field {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid #e6e6e6;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.input-field:focus, .amount-field:focus, .message-field:focus {
+  border-color: var(--surface-primary-01, #8755ca);
+  outline: none;
+}
+
+/* Amount Input */
+.amount-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.currency-symbol {
+  position: absolute;
+  left: 16px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  z-index: 1;
+}
+
+.amount-field {
+  padding-left: 40px;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Quick Amounts */
+.quick-amounts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.quick-amounts button {
+  padding: 12px;
+  border: 2px solid #e6e6e6;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quick-amounts button:hover {
+  border-color: var(--surface-primary-01, #8755ca);
+  background-color: #f8f9fa;
+}
+
+/* Contacts */
+.recent-contacts {
+  margin-top: 24px;
+}
+
+.recent-contacts h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  color: #333;
+}
+
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #e6e6e6;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.contact-item:hover {
+  border-color: var(--surface-primary-01, #8755ca);
+  background-color: #f8f9fa;
+}
+
+.contact-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--surface-primary-01, #8755ca);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-name {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  color: #333;
+}
+
+.contact-detail {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
+/* Review Card */
+.review-card {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.review-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.review-item.total {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.review-label {
+  color: #666;
+}
+
+.review-value {
+  font-weight: 600;
+  color: #333;
+}
+
+.review-divider {
+  height: 1px;
+  background-color: #e6e6e6;
+  margin: 12px 0;
+}
+
+.review-message {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e6e6e6;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+/* Bottom Actions */
+.send-actions {
+  padding: 20px;
+  border-top: 1px solid #e6e6e6;
+  background-color: white;
+}
+
+.send-btn {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, var(--surface-primary-01, #8755ca), var(--surface-primary-02, #4c74d5));
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.send-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(135, 85, 202, 0.3);
+}
+
+.send-btn:disabled {
+  background: #e6e6e6;
+  color: #999;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}

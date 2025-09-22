@@ -1,0 +1,224 @@
+/* ==========================================================================
+   BUTTON COMPONENT STYLES
+   ========================================================================== */
+
+/* Base Button Styles */
+.swift-button {
+  /* Reset default button styles */
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  
+  /* Layout */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Typography */
+  font-family: 'Satoshi', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  
+  /* Transitions */
+  transition: all 0.2s ease;
+  
+  /* Border radius - More rounded */
+  border-radius: 16px;
+}
+
+/* ==========================================================================
+   BUTTON SIZES
+   ========================================================================== */
+
+/* Large Button - 56px height */
+.swift-button--large {
+  height: 56px;
+  padding: 0 24px;
+  font-size: 16px;
+  line-height: 120%;
+  border-radius: 28px;
+  min-width: auto; /* Allow inline styles to override */
+}
+
+/* Medium Button - 40px height */
+.swift-button--medium {
+  height: 40px;
+  padding: 0 20px;
+  font-size: 14px;
+  line-height: 120%;
+  border-radius: 20px;
+  min-width: auto; /* Allow inline styles to override */
+}
+
+/* Small Button - 32px height */
+.swift-button--small {
+  height: 32px;
+  padding: 0 16px;
+  font-size: 12px;
+  line-height: 120%;
+  border-radius: 16px;
+  min-width: auto; /* Allow inline styles to override */
+}
+
+/* ==========================================================================
+   BUTTON VARIANTS
+   ========================================================================== */
+
+/* Primary Button - Gradient with surface/primary01 and surface/primary02 */
+.swift-button--primary {
+  background: linear-gradient(135deg, var(--surface-primary-01, #8755ca), var(--surface-primary-02, #4c74d5));
+  color: var(--text-invert, #ffffff);
+  border: none;
+}
+
+.swift-button--primary:hover {
+  background: linear-gradient(135deg, var(--action-surface-hover, #a27cd6), var(--surface-primary-02, #4c74d5));
+  transform: translateY(-1px);
+}
+
+.swift-button--primary:active {
+  background: linear-gradient(135deg, var(--action-surface-selected, #6d38b4), var(--surface-primary-02, #4c74d5));
+  transform: translateY(0);
+
+}
+
+/* Secondary Button - surface 01 background, text/subtitle color */
+.swift-button--secondary {
+  background-color: var(--surface-01, #f8f8f8);
+  color: var(--text-subtitle, #31302f);
+}
+
+.swift-button--secondary:hover {
+  background-color: var(--surface-03, #cac9c8);
+  border-color: var(--border-03, #cac9c8);
+  transform: translateY(-1px);
+}
+
+.swift-button--secondary:active {
+  background-color: var(--surface-03, #cac9c8);
+  transform: translateY(0);
+}
+
+/* Tertiary Button - No background, text/caption color */
+.swift-button--tertiary {
+  background-color: transparent;
+  color: var(--text-caption, #4b4948);
+  border: none;
+}
+
+.swift-button--tertiary:hover {
+  background-color: var(--surface-01, #f8f8f8);
+  color: var(--text-subtitle, #31302f);
+}
+
+.swift-button--tertiary:active {
+  background-color: var(--surface-03, #cac9c8);
+}
+
+/* Secondary White Button - White background with primary gradient text */
+.swift-button--secondary-white {
+  background-color: var(--surface-00, #ffffff);
+  color: var(--surface-primary-01, #8755ca);
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.swift-button--secondary-white:hover {
+  background-color: var(--surface-01, #f8f8f8);
+  transform: translateY(-1px);
+}
+
+.swift-button--secondary-white:active {
+  background-color: var(--surface-02, #f0f0f0);
+  transform: translateY(0);
+}
+
+/* Success White Button - White background with primary gradient text (for success screen) */
+.swift-button--success-white {
+  background-color: var(--surface-00, #ffffff);
+  border: none;
+  position: relative;
+  color: transparent; /* Hide default text */
+}
+
+/* Gradient text overlay */
+.swift-button--success-white::before {
+  content: 'Close';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, var(--surface-primary-01, #8755ca), var(--surface-primary-02, #4c74d5));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  pointer-events: none;
+}
+
+.swift-button--success-white:hover {
+  background-color: var(--surface-01, #f8f8f8);
+  transform: translateY(-1px);
+}
+
+.swift-button--success-white:active {
+  background-color: var(--surface-02, #f0f0f0);
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   DISABLED STATE
+   ========================================================================== */
+
+.swift-button--disabled {
+  background-color: var(--surface-disabled, #b1afae) !important;
+  color: var(--text-disabled, #989694) !important;
+  border-color: var(--border-disabled, #989694) !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.swift-button--disabled:hover,
+.swift-button--disabled:active {
+  background-color: var(--surface-disabled, #b1afae) !important;
+  color: var(--text-disabled, #989694) !important;
+  border-color: var(--border-disabled, #989694) !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Primary disabled - special case */
+.swift-button--primary.swift-button--disabled {
+  background: var(--surface-disabled, #b1afae) !important;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .swift-button--large {
+    height: 48px;
+    padding: 0 20px;
+    font-size: 15px;
+  }
+  
+  .swift-button--medium {
+    height: 36px;
+    padding: 0 16px;
+    font-size: 13px;
+  }
+  
+  .swift-button--small {
+    height: 28px;
+    padding: 0 12px;
+    font-size: 11px;
+  }
+}
