@@ -4,6 +4,11 @@ import Divider from '../Divider';
 import IconButton from '../IconButton';
 
 function Step5ReviewDetails({ recipientData, accountData, sendingAmount, recipientAmount, exchangeRate }) {
+  // Calculate total amount (sending amount + fees)
+  const baseAmount = parseFloat(sendingAmount) || 100.98;
+  const fees = 0.98;
+  const totalAmount = baseAmount + fees;
+
   return (
     <div className="send-process">
       <div className="header-content">
@@ -38,7 +43,10 @@ function Step5ReviewDetails({ recipientData, accountData, sendingAmount, recipie
       
       <div className="sending-item">
         <label className="l1 body-text">You send</label>
-        <h3 className="h3">USD {sendingAmount || "100.98"}</h3>
+        <div className="amount-with-breakdown">
+          <h3 className="h3">USD {totalAmount.toFixed(2)}</h3>
+          <span className="breakdown-text">USD {baseAmount.toFixed(2)} plus fees</span>
+        </div>
       </div>
       
       <div className="sending-item">

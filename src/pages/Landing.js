@@ -16,7 +16,7 @@ function Landing() {
   };
 
   const handleFigmaClick = () => {
-    window.open("https://www.figma.com/design/s41Vy4ZGv6zbnD1IhQt9Xj/Ria-Design-Challenge?node-id=98-3010&t=w1OpHqhDkUKD73JH-1", "_blank");
+    window.open("https://www.figma.com/design/s41Vy4ZGv6zbnD1IhQt9Xj/Swift-Money?node-id=202-3586&t=j7GPLtvvkF6z9KPZ-4", "_blank");
   };
 
   return (

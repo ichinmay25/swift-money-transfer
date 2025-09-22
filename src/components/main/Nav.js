@@ -85,7 +85,7 @@ function Nav({ showBackButton = false, backTo = "/", showChatBubble = false }) {
                 icon="call_made"
                 onClick={(e) => {
                   e.preventDefault();
-                  window.open('https://chinmayinamdar.com', '_blank', 'noopener,noreferrer');
+                  window.open('https://www.chinmayinamdar.design?utm_source=design_challenge&utm_medium=created-by&utm_campaign=dc_sept25&utm_id=dc_sept25', '_blank', 'noopener,noreferrer');
                 }}
               />
             </div>

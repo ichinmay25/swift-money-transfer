@@ -276,7 +276,7 @@ function SendModal({ isOpen, onClose, onSendSuccess, prefillData = null, fromCha
         {/* NavBar */}
         <div className="send-modal-navbar">
           <div className="send-modal-navbar-left">
-            {currentStep > 1 && (
+            {currentStep > 1 && !fromChat && (
               <IconButton 
                 variant="secondary" 
                 size="medium"
