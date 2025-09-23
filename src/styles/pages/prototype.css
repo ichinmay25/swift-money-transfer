@@ -31,10 +31,10 @@
   flex: 1;
 }
 
-/* Info Container - 322px width, 699px height, vertical alignment, 16px gap */
+/* Info Container - 362px width, 787px height, vertical alignment, 16px gap */
 .prototype-info-container {
-  width: 322px;
-  height: 699px;
+  width: 362px;
+  height: 787px;
   display: flex;
   flex-direction: column; /* Vertical alignment */
   gap: 16px;
@@ -84,8 +84,8 @@
   }
   
   .prototype-info-container {
-    width: 280px;
-    height: 608px;
+    width: 315px;
+    height: 684px;
   }
 }
 
@@ -109,8 +109,8 @@
   
   .prototype-info-container {
     width: 100%;
-    max-width: 280px;
-    height: 480px;
+    max-width: 315px;
+    height: 540px;
   }
   
   .prototype-info-container h1 {

@@ -3,16 +3,16 @@
    ========================================================================== */
 
 .prototype-frame {
-  width: 322px;
-  height: 699px;
-  border-radius: 26px;
+  width: 362px;
+  height: 787px;
+  border-radius: 29px;
   background-color: var(--surface-00);
   box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   position: relative;
-  transform: scale(0.8);
+  transform: scale(0.9);
   transform-origin: center;
 }
 
@@ -130,18 +130,18 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
   .prototype-frame {
-    width: 280px;
-    height: 608px;
-    transform: scale(0.8);
+    width: 315px;
+    height: 684px;
+    transform: scale(0.9);
   }
 }
 
 @media (max-width: 768px) {
   .prototype-frame {
     width: 100%;
-    max-width: 280px;
-    height: 480px;
-    transform: scale(0.8);
+    max-width: 315px;
+    height: 540px;
+    transform: scale(0.9);
   }
   
   .status-bar-container {
