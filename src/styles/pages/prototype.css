@@ -6,6 +6,7 @@
 .prototype-hero-section {
   height: 100vh;
   padding: 0 32px;
+  margin-top: calc(40px + 4rem); /* 40px + nav height (4rem) */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,6 +95,7 @@
     height: auto;
     min-height: 100vh;
     padding: 0 16px;
+    margin-top: calc(40px + 4rem); /* 40px + nav height (4rem) */
   }
   
   .prototype-hero-container {
