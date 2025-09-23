@@ -5,7 +5,7 @@ import avatarImage from '../../assets/images/avatar.png';
 import swiftLogo from '../../assets/images/swift.svg';
 import '../../styles/components/nav.css';
 
-function Nav({ showBackButton = false, backTo = "/", showChatBubble = false }) {
+function Nav({ showBackButton = false, backTo = "/", showChatBubble = false, transparent = false }) {
   const navigate = useNavigate();
   const [isBubbleVisible, setIsBubbleVisible] = useState(false);
 
@@ -36,7 +36,7 @@ function Nav({ showBackButton = false, backTo = "/", showChatBubble = false }) {
     }
   }, [isBubbleVisible]);
   return (
-    <nav className="nav">
+    <nav className={`nav ${transparent ? 'nav-transparent' : ''}`}>
       <div className="nav-container">
         {/* Back Button and Logo Section - Left */}
         <div className="nav-left-section">

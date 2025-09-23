@@ -35,7 +35,7 @@ function Prototype() {
   };
   return (
     <>
-      <Nav showBackButton={true} backTo="/" showChatBubble={showChatBubble} />
+      <Nav showBackButton={true} backTo="/" showChatBubble={showChatBubble} transparent={true} />
       <div className="prototype-hero-section">
         <div className="prototype-hero-container">
           {/* Left side content */}

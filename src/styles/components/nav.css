@@ -14,6 +14,12 @@
   padding: 1rem 0;
 }
 
+.nav-transparent {
+  background-color: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
 .nav-container {
   max-width: 1280px;
   margin: 0 auto;

@@ -9,7 +9,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 4rem; /* Account for fixed nav */
   box-sizing: border-box;
 }
 
@@ -95,7 +94,6 @@
     height: auto;
     min-height: 100vh;
     padding: 0 16px;
-    padding-top: 6rem;
   }
   
   .prototype-hero-container {
