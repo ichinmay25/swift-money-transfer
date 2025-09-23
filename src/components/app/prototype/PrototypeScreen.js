@@ -296,6 +296,10 @@ const PrototypeScreen = forwardRef(function PrototypeScreen({ onContentChange, o
             >
               {renderScreen()}
             </PrototypeFrame>
+            {/* Scale indicator */}
+            <div className="prototype-scale-indicator">
+              0.93x scale
+            </div>
           </div>
         );
 });
